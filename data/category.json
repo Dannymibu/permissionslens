@@ -1,1 +1,61 @@
-
+[
+  {"id":"messaging","name":"Messaging and calling","rules":{
+    "camera":["expected","Video calls and sending photos need the camera."],
+    "microphone":["expected","Voice calls and voice notes need the microphone."],
+    "contacts":["expected","It finds which of your contacts already use the app."],
+    "photos_files":["expected","You need it to send pictures, videos and documents."],
+    "notifications":["expected","It alerts you to new messages."],
+    "location":["sometimes","Only needed if you share your live location."],
+    "sms":["sometimes","Some apps use it once to verify your phone number. It is rarely needed after setup."],
+    "bluetooth":["sometimes","Useful for calls through earbuds or a car."]}},
+  {"id":"navigation","name":"Maps and navigation","rules":{
+    "location":["expected","It cannot give directions without knowing where you are."],
+    "background_location":["expected","Turn-by-turn directions keep running when the screen is off."],
+    "notifications":["expected","Traffic and route alerts."],
+    "bluetooth":["sometimes","Connecting to a car system."],
+    "microphone":["sometimes","Voice commands."],
+    "contacts":["sometimes","Saved places such as a friend's address."],
+    "calendar":["sometimes","Suggesting routes to your meetings."],
+    "photos_files":["sometimes","Saving offline maps."],
+    "overlay":["sometimes","Some apps show a floating map. Allow it only if you want that."]}},
+  {"id":"simple_tools","name":"Flashlight, calculator or other simple tool","unusual":"A simple tool has no reason to ask for this, which is a classic sign of an app collecting your data.","rules":{
+    "camera":["sometimes","Some flashlight apps use the camera's LED. A calculator or notes tool does not need it."],
+    "notifications":["sometimes","Only useful for reminders you set yourself."]}},
+  {"id":"photo_camera","name":"Camera and photo editing","rules":{
+    "camera":["expected","Taking and editing photos is the whole job."],
+    "photos_files":["expected","It opens and saves your pictures."],
+    "microphone":["sometimes","Needed only to record sound with videos."],
+    "location":["sometimes","Used to tag where a photo was taken. You can turn that off."],
+    "notifications":["sometimes","Updates on exports or shared albums."]}},
+  {"id":"banking","name":"Banking and payments","unusual":"Banking apps are prime targets for fraud, so any unexpected permission deserves extra suspicion.","rules":{
+    "notifications":["expected","Alerts for transactions and security codes."],
+    "camera":["expected","Scanning cheques, QR codes and ID documents."],
+    "location":["sometimes","Fraud checks and finding nearby branches or ATMs."],
+    "contacts":["sometimes","Sending money to people in your contacts."],
+    "sms":["sometimes","Some apps read one-time codes. Typing the code yourself is safer."],
+    "photos_files":["sometimes","Uploading statements or ID photos."]}},
+  {"id":"social","name":"Social media","rules":{
+    "camera":["expected","Taking photos and videos to post."],
+    "microphone":["expected","Recording video and voice messages."],
+    "photos_files":["expected","Choosing pictures to post."],
+    "notifications":["expected","Likes, comments and messages."],
+    "contacts":["sometimes","Finding friends. You can skip this and search by name instead."],
+    "location":["sometimes","Tagging places and finding nearby events."],
+    "calendar":["sometimes","Adding events you reply yes to."]}},
+  {"id":"games","name":"Game","unusual":"Most games do not need personal data. Free games that ask for it are often collecting it for advertising.","rules":{
+    "notifications":["sometimes","Reminders and rewards. Easy to switch off if they get pushy."],
+    "microphone":["sometimes","Voice chat with other players."],
+    "photos_files":["sometimes","Saving screenshots or game data."],
+    "bluetooth":["sometimes","Wireless game controllers."],
+    "camera":["sometimes","Augmented reality games."]}},
+  {"id":"fitness","name":"Fitness and health","rules":{
+    "body_sensors":["expected","Reading heart rate and other sensor data is the point of the app."],
+    "location":["expected","Mapping the routes of your runs, walks and rides."],
+    "bluetooth":["expected","Connecting to watches and heart-rate straps."],
+    "notifications":["expected","Workout reminders and summaries."],
+    "background_location":["sometimes","Tracking a workout while the screen is off. Allow it only while a workout is running."],
+    "camera":["sometimes","Scanning food barcodes or taking progress photos."],
+    "contacts":["sometimes","Finding friends to compare with."],
+    "calendar":["sometimes","Scheduling workouts."],
+    "photos_files":["sometimes","Saving progress photos or exporting your data."]}}
+]
