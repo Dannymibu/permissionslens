@@ -1,1 +1,28 @@
+:root { --bg:#ffffff; --ink:#13292f; --muted:#4b6168; --surface:#fff; --line:#c3d2d0;
+  --ok:#17724a; --ok-bg:#e3f3ea; --maybe:#8a5a00; --maybe-bg:#fbf0d9; --warn:#a8470f; --warn-bg:#fbe8dc; --bad:#a62b2b; --bad-bg:#fae3e3; }
+* { box-sizing: border-box; }
+body { margin:0; background:var(--bg); color:var(--ink); font:1.0625rem/1.6 "Atkinson Hyperlegible", system-ui, sans-serif; }
+main { max-width:56rem; margin:0 auto; padding:2.5rem 1.25rem 3rem; }
+h1 { font-size:clamp(1.9rem,5vw,2.8rem); line-height:1.15; margin:0 0 .75rem; max-width:20ch; }
+h2 { font-size:1.35rem; margin:0 0 .25rem; }
+h3 { font-size:1rem; margin:0 0 .35rem; }
+header p, .hint { color:var(--muted); max-width:60ch; margin:0 0 1.5rem; }
+.sentence { font-size:clamp(1.35rem,3.6vw,2rem); line-height:2.1; margin:1.5rem 0 1.75rem; }
+select { font:inherit; color:var(--ink); background:var(--surface); border:2px solid var(--ink); border-radius:.5rem; padding:.1rem .5rem; max-width:100%; }
+:focus-visible { outline:3px solid #1b6ef3; outline-offset:2px; }
+#result { min-height:4rem; margin-bottom:3rem; }
+.empty { color:var(--muted); border:2px dashed var(--line); border-radius:.75rem; padding:1.25rem; margin:0; }
+.verdict { background:var(--surface); border-left:.6rem solid var(--c); border-radius:.75rem; padding:1.25rem 1.5rem 1.5rem; }
+.verdict h2 { color:var(--c); font-size:1.75rem; }
+.verdict .why { font-size:1.15rem; margin:.25rem 0 1.25rem; max-width:60ch; }
+.verdict.ok { --c:var(--ok); } .verdict.maybe { --c:var(--maybe); } .verdict.warn { --c:var(--warn); } .verdict.bad { --c:var(--bad); }
+.cols { display:grid; grid-template-columns:repeat(auto-fit,minmax(16rem,1fr)); gap:1.25rem; }
+.cols p { margin:0 0 .6rem; }
+.guide { display:grid; grid-template-columns:repeat(auto-fill,minmax(12.5rem,1fr)); gap:.6rem; }
+.guide button { font:inherit; text-align:left; color:var(--ink); background:var(--surface); border:1px solid var(--line); border-radius:.6rem; padding:.7rem .85rem; cursor:pointer; display:flex; flex-direction:column; gap:.15rem; }
+.guide button:hover { border-color:var(--ink); }
+.guide .risk { font-size:.9rem; font-weight:700; }
+.risk.low { color:var(--ok); } .risk.medium { color:var(--maybe); } .risk.high { color:var(--bad); }
+#error { background:var(--bad-bg); color:var(--bad); border-radius:.6rem; padding:1rem 1.25rem; }
+footer { margin-top:3rem; color:var(--muted); font-size:.95rem; max-width:60ch; }
 
